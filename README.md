@@ -33,21 +33,25 @@ Built using **Multinomial Naive Bayes** and **TF-IDF vectorization**, this proje
 ## 📥 Installation & Setup
 
 ```bash
-# 1. Create and activate virtual environment (recommended)
+# 1. Clone the repository and enter the project directory
+git clone https://github.com/idsaturn07/Spam-Email-Classifier.git
+cd email-spam-classifier
+
+# 2. Create and activate virtual environment (recommended)
 python -m venv venv
 .env\Scriptsctivate       # On Windows
 source venv/bin/activate     # On Mac/Linux
 
-# 2. Install required dependencies
+# 3. Install required dependencies
 pip install scikit-learn pandas numpy joblib
 
-# 3. First-time setup:
-#    Uncomment the train() line inside main() of spam_classifier.py and run:
-python spam_classifier.py
+# 4. First-time setup:
+#    Uncomment the train() line inside main() of spam_detector.py and run:
+python spam_detector.py
 
-# 4. For subsequent runs:
+# 5. For subsequent runs:
 #    Keep the train() line commented. Just run the script:
-python spam_classifier.py
+python spam_detector.py
 ```
 
 ---
@@ -89,7 +93,7 @@ Probabilities: ham 3.3%, spam 96.7%
 
 ```
 email-spam-classifier/
-├── spam_classifier.py         # Main Python script with menu
+├── spam_detector.py         # Main Python script with menu
 ├── spam_classifier.pkl        # Trained model (auto-saved)
 ├── tfidf_vectorizer.pkl       # Saved vectorizer (auto-saved)
 ├── sms_dataset.tsv            # Dataset file (auto-downloaded on first run)
